@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAE0E0"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:scaleType="center"
+        android:src="@drawable/nvo"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/onepiece"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="One Piece"
+            android:onClick="onClickedRadioButton"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/naruto"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_height="wrap_content"
+            android:text="Naruto"
+            android:onClick="onClickedRadioButton"/>
+    </RadioGroup>
+
+    <GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:columnCount="3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Kekuatan"
+            android:paddingHorizontal="16dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:paddingHorizontal="16dp"
+            android:layout_gravity="center"
+            android:text="Usia" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_columnSpan="3"
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </GridLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
