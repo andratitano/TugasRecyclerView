@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.RadioButton
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         recyclerview.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+       // recyclerview.layoutManager = GridLayoutManager(this,3, GridLayoutManager.VERTICAL,false)
     }
 
     val listNaruto= arrayListOf(
